@@ -1,0 +1,8 @@
+shutdown 关闭终端
+help     帮助
+startMik 启动MikOS
+setting  设置
+repair   修复运行环境
+time     时间
+open     打开
+restart  重启

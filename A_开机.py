@@ -11,8 +11,8 @@ try:
     os.startfile('logon.pyw')
 except:
     try:
-        showerror('错误', '无法找到登录文件，我们即将将您重定向至MayDOS')
-        os.startfile('MayDOS\\MayDOS_System.py')
+        showerror('错误', '无法找到登录文件，我们即将将您重定向至MikDOS')
+        os.startfile('MikDOS\\MikDOS_Main.py')
     except:
-        print('因为系统文件丢失，我们将您重定向至MayDOS')
-        os.startfile('MayDOS\\MayDOS_System.py')
+        print('因为系统文件丢失，我们将您重定向至MikDOS')
+        os.startfile('MikDOS\\MikDOS_Main.py')
