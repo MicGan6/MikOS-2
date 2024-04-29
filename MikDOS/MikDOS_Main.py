@@ -2,8 +2,11 @@ import os, sys
 import DOS.lib.DOSLib as DOSLib
 
 # 获取工作目录和上级目录
-path = os.getcwd()
-parent_path = os.path.abspath('..')
+path = os.getcwd() + '\\MikDOS'
+print(path)
+parent_path = os.path.abspath('.')
+#打印系统信息
+print(parent_path)
 print('MikDOS V1')
 print('© Ark Krin Studio MikOS Dev Team 保留所有权利')
 while True:
@@ -19,6 +22,7 @@ while True:
         sys.exit()
     elif comd == 'startmik':
         DOSLib.startmik(parent_path)
+        sys.exit()
     else:
         print('未知指令')
         continue

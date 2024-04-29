@@ -160,9 +160,9 @@ def open3():
 
 def open4():
     try:
-        startfile(getcwd()+'\\MayDOS\\MayDOS_System.py')
+        startfile(getcwd()+'\\MikDOS\\MikDOS_Main.py')
     except:
-        startfile(path.dirname(getcwd())+'\\MayDOS\\MayDOS_System.py')
+        startfile(path.dirname(getcwd())+'\\MikDOS\\MikDOS_Main.py')
 def open5():
     try:
         startfile(getcwd()+'\\osinfo.pyw')
