@@ -22,31 +22,27 @@ SysPerAPI = func.SysPerAPI
 CODE = func.check_ver()    #读取版本号
 
 #以下为检查文件(夹)的完整性
-if os.path.isdir('MayDOS_Login/') == False:
-    os.makedirs('MayDOS_Login/')
-if os.path.isdir('important/') == False:
-    os.makedirs('important/')
-if os.path.isdir('important/Applications') == False:
-    os.makedirs('important/Applications')
-if os.path.isdir('important/log') == False:
-    os.makedirs('important/log')
-if os.path.isdir('important/download') == False:
-    os.makedirs('important/download')
-if os.path.isfile('important/Version.ver') == False:
-    with open('important/Version.ver','w',encoding='gbk') as f:
-        f.write(f"{CODE}\n")
-        f.close()
-if os.path.isfile('important/download/cg.txt') == False:
-    path_url = os.getcwd() + "\\"
-    with open('important/download/cg.txt','w') as f:
-        f.write(path_url)
-        f.close()
-if os.path.isfile('important/Applications/sys.json') == False:
-    SYS_0 = {"Name":CODE,"description":"MayDOS"}
-    with open('important/Applications/sys.json','w') as f:
-        SYS_1 = json.dumps(SYS_0,sort_keys=True, indent=4, separators=(',', ':'))
-        f.write(SYS_1)
-        f.close()
+
+# 检查函数
+def check_integrality(uri, content=None, encoding=None):
+    if content != None:
+        # 此处不要合并到上面的判断，会触发下面列表创建文件夹
+        if not os.path.isfile(uri):
+            # open函数encoding不传默认为None
+            with open(uri,'w',encoding=encoding) as f:
+                f.write(content)
+                # 用with上下文管理器不需要close()
+        return
+    for i in uri:
+        # 为什么以前判断要用==呢？
+        if not os.path.isdir(i):
+            # 没有则新建
+            os.makedirs(i)
+
+check_integrality(['MayDOS_Login/', 'important/', 'important/Applications', 'important/log', 'important/download'])
+check_integrality('important/Version.ver', f"{CODE}\n", 'gbk')
+check_integrality('important/download/cg.txt', os.getcwd() + "\\")
+check_integrality('important/Applications/sys.json', json.dumps({"Name":CODE,"description":"MayDOS"},sort_keys=True, indent=4, separators=(',', ':')))
 #文件完整性检查到此结束
 
 tk = tk.Tk()
