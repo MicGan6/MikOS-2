@@ -24,11 +24,11 @@ try:
     #转化类型
     last_version = float(last_version)
     #检查更新
-    if last_version > old_version and LV_State == 'ready':
+    if last_version > old_version and LV_State == 'Release':
         showinfo('检查更新', f'发现新版本，由于技术原因，请手动下载。\n链接{link}\n提取码{password}')
     elif last_version == old_version:
         showinfo('检查更新', '您的版本已是最新')
-    elif last_version > old_version and LV_State == 'Dev':
+    elif last_version > old_version and LV_State == 'Devlope':
         showinfo('检查更新', '新版本正在开发哦~请坐和放宽~')
 except requests.exceptions.ConnectionError:
     showerror('错误', '网络原因，请稍后再试')

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/12/10 22:02
 # @Author  : 一只小肝同学
-# @FileName: A_开机.py
+# @FileName: A_start.py
 # @Software: PyCharm
 # @Blog    ：https://gangan1.github.io
 import os, time
