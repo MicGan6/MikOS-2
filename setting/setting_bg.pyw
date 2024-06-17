@@ -5,7 +5,7 @@ from tkinter.filedialog import askopenfilename
 from sys import exit as ex
 
 
-#----------Made by 悠然自得、添亮了（肝肝甘甘的野生电脑）----------#
+#----------Made by 悠然自得、MicGan----------#
 
 
 # 创建主窗口

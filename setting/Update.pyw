@@ -14,7 +14,7 @@ def get_OLD_Ver():
 try:
     old_version = get_OLD_Ver()
     old_version = float(old_version)
-    showinfo('提示', '已经开始检查最新版本啦！不要同时多次检查更新，否则程序会发生错误！慢的原因是服务器在Github上')
+    showinfo('提示', '已经开始检查最新版本啦！请不要同时多次检查更新，慢的原因是版本核对文件在Github上')
     Update = json.loads(requests.get('https://gangan1.github.io/MikOS_Update/Version.json').text) #获取并加载版本的json文件
     #获取json数据中的值
     last_version = Update.get('version')

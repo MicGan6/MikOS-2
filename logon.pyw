@@ -4,7 +4,7 @@ from sys import exit as ex
 from PIL import ImageTk, Image
 import time
 
-#----------Made by 悠然自得、添亮了（肝肝甘甘的野生电脑）----------#
+#----------Made by 悠然自得、MicGan----------#
 
 
 def logon():

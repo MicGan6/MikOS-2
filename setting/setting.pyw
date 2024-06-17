@@ -2,7 +2,7 @@ from tkinter import Tk,Button,Canvas,messagebox,OptionMenu,StringVar
 from os import startfile,path,getcwd,system
 from sys import exit as ex
 
-#----------Made by 悠然自得、添亮了（肝肝甘甘的野生电脑）----------#
+#----------Made by 悠然自得、MicGan----------#
 
 
 

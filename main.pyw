@@ -5,7 +5,7 @@ from os import startfile, getcwd
 
 
 
-#----------Made by 悠然自得、添亮了（肝肝甘甘的野生电脑）----------#
+#----------Made by 悠然自得、MicGan----------#
 
 
 #创建窗口
