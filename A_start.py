@@ -4,7 +4,7 @@
 # @FileName: A_start.py
 # @Software: PyCharm
 # @Blog    ：https://gangan1.github.io
-import os, time
+import os
 from tkinter.messagebox import showerror
 print('正在重定向...')
 try:

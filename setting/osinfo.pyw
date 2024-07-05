@@ -2,7 +2,7 @@ from tkinter import messagebox,Tk
 import os
 root = Tk()
 root.withdraw()
-def get_OLD_Ver():
+def get_old_ver():
 
     try:
         f = open(os.getcwd() + '\\setting\\Version.Ver', mode = 'r')
@@ -11,7 +11,7 @@ def get_OLD_Ver():
         f = open(os.path.dirname(os.getcwd()) + '\\setting\\Version.Ver')
         v = f.readline()
     return v
-Version = get_OLD_Ver()
+Version = get_old_ver()
 p_path = os.getcwd() #获取父目录地址
 f = open(p_path + '\MayDOS\important\Version.ver', mode = 'r') #获取MayDOS版本
 MayDOS_v = f.readline()

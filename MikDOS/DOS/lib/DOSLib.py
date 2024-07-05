@@ -1,11 +1,14 @@
 """
 本程序为MikDOS的运行库
-变量path为工作目录，p_path为上级目录
+变量path为DOS工作目录，p_path为DOS上级目录
 """
-import os, sys, time
+import os, time
+
+
+
 #帮助指令
 def helpdos(path):
-    with open(path + '\\DOS\\Command.txt', mode='r', encoding='utf-8') as cmd:
+    with open(path + '\\DOS\\file\\Command.txt', mode='r', encoding='utf-8') as cmd:
         file = cmd.read()
         print(file)
 #启动MikOS
@@ -20,3 +23,9 @@ def p_time():
 #延时打印(故意滴doge)
 def show_later():
     time.sleep(1)
+def dos_config(path):
+    print('请阅读下面的教程')
+    print('---------------------------------')
+    with open(path + '\\DOS\\file\\config_eg.txt', mode='r', encoding='utf-8') as config_eg:
+        file_con_eg = config_eg.read()
+        print(file_con_eg)

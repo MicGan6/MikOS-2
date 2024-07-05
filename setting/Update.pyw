@@ -2,7 +2,7 @@
 import requests, json, os
 from tkinter.messagebox import showinfo, showerror
 p = os.getcwd()
-def get_OLD_Ver():
+def get_old_ver():
     global p
     try:
         f = open(p + '\\setting\\Version.Ver', mode = 'r')
@@ -12,7 +12,7 @@ def get_OLD_Ver():
         v = f.readline()
     return v
 try:
-    old_version = get_OLD_Ver()
+    old_version = get_old_ver()
     old_version = float(old_version)
     showinfo('提示', '已经开始检查最新版本啦！请不要同时多次检查更新，慢的原因是版本核对文件在Github上')
     Update = json.loads(requests.get('https://gangan1.github.io/MikOS_Update/Version.json').text) #获取并加载版本的json文件

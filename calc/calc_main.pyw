@@ -1,7 +1,7 @@
 from tkinter import Tk,Button,Canvas
 
 
-#----------Made by 悠然自得、添亮了（肝肝甘甘的野生电脑）----------#
+#----------Made by 悠然自得、MicGan----------#
 
 
 # 定义主窗口
@@ -12,7 +12,7 @@ root.resizable(False, False)
 
 
 
-def Button_main(text,bg='#D4F1F4',width=3):
+def button_main(text,bg='#D4F1F4',width=3):
     return Button(root, text=text, font=("Arial", 14), width=width, height=1, bd=4, bg=bg,command=lambda :yunsuan(text),overrelief='sunken',activebackground="light yellow")
 
 
@@ -62,27 +62,27 @@ def yunsuan(num):
     update()
 
 # 定义数字按钮
-btn_1 = Button_main('1')
-btn_2 = Button_main('2')
-btn_3 = Button_main('3')
-btn_4 = Button_main('4')
-btn_5 = Button_main('5')
-btn_6 = Button_main('6')
-btn_7 = Button_main('7')
-btn_8 = Button_main('8')
-btn_9 = Button_main('9')
-btn_0 = Button_main('0',width=9)
-btn_point = Button_main('.')
+btn_1 = button_main('1')
+btn_2 = button_main('2')
+btn_3 = button_main('3')
+btn_4 = button_main('4')
+btn_5 = button_main('5')
+btn_6 = button_main('6')
+btn_7 = button_main('7')
+btn_8 = button_main('8')
+btn_9 = button_main('9')
+btn_0 = button_main('0',width=9)
+btn_point = button_main('.')
 
 
 # 定义操作符按钮
-btn_add = Button_main('+')
-btn_sub = Button_main('-')
-btn_mul = Button_main('*')
-btn_div = Button_main('/')
-btn_eq = Button_main('=',width=8)
-btn_ce = Button_main(text='CE',bg='#F7AF9D')
-btn_back = Button_main(text='←')
+btn_add = button_main('+')
+btn_sub = button_main('-')
+btn_mul = button_main('*')
+btn_div = button_main('/')
+btn_eq = button_main('=',width=8)
+btn_ce = button_main(text='CE',bg='#F7AF9D')
+btn_back = button_main(text='←')
 
 
 btn_1.place(x=10, y=80)

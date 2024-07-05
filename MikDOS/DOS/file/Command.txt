@@ -6,3 +6,5 @@ repair   修复运行环境
 time     时间
 open     打开
 restart  重启
+about    关于
+setting  设置

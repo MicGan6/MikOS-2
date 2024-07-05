@@ -1,5 +1,5 @@
 from tkinter.messagebox import showinfo
-from tkinter import Tk, Listbox, Label
+from tkinter import Tk, Listbox
 from tkinter.simpledialog import askstring
 import requests, json
 from shutil import move, Error
@@ -35,22 +35,23 @@ num = askstring('输入序列号', '请输入要下载的音乐号（输入格�
 for s in num:
     # 此处的 header1 可有可无 但是不带 cookie 的 headers 请求时 可能会出现问题
     headers1 = {
-        'UserAgent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0',
-        'Cookie': 'kg_mid=536e52feec7d1c95137aa1d341f8144e; kg_dfid=3exupN3BZJMQ3ftR4x0KOXDk; kg_dfid_collect=d41d8cd98f00b204e9800998ecf8427e; kg_mid_temp=536e52feec7d1c95137aa1d341f8144e'}
+        'UserAgent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0'}
+        #'Cookie': 'kg_mid=536e52feec7d1c95137aa1d341f8144e; kg_dfid=3exupN3BZJMQ3ftR4x0KOXDk; kg_dfid_collect=d41d8cd98f00b204e9800998ecf8427e; kg_mid_temp=536e52feec7d1c95137aa1d341f8144e'}
 
     # 构造你请求资源的URL
 
     info_url = f'https://wwwapi.kugou.com/yy/index.php?r=play/getdata&hash={m_list[int(s) - 1].get("FileHash")}&album_audio_id={m_list[int(s) - 1].get("ID")}'
 
     # 进行访问
-    info_resp = requests.get(info_url, headers=headers1)
-
+    info_resp = requests.get(url = info_url, headers=headers1)
+    info_resp = info_resp.text
+    print(info_resp)
     # 拿取你所请求资源的数据（这里是得到播放音乐的地址）
     get_music_url = info_resp.json()['data']['play_url']
     # print(f"音乐的播放地址为：'\n'{get_music_url}")
 
     # 发送请求到服务器，获取音乐资源
-    m_resp = requests.get(get_music_url, headers=headers1)
+    m_resp = requests.get(url = get_music_url, headers=headers1)
 
     # 服务器回应的数据 --保存数据
     name = m_list[int(s) - 1].get('FileName') + '.mp3'

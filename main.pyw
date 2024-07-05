@@ -138,7 +138,7 @@ def  mouse_hand(*args):
 def mouse_arrow(*args):
     root.config(cursor = 'arrow')
 
-def Music_Center(*args):
+def music_center(*args):
     startfile('music\MMC Main.py')
 
 #设置
@@ -195,7 +195,7 @@ M_img = ImageTk.PhotoImage(M_img)
 
 M_btn = c.create_image(imgpos[2][0],imgpos[2][1], image=M_img)
 
-c.tag_bind(M_btn,'<Button-1>',Music_Center)
+c.tag_bind(M_btn,'<Button-1>',music_center)
 # 将鼠标事件绑定到图片项上
 c.tag_bind(M_btn, '<Enter>', mouse_hand)
 c.tag_bind(M_btn, '<Leave>', mouse_arrow)

@@ -1,7 +1,6 @@
 from os import listdir
-from tkinter import Tk, StringVar,Button,messagebox, Radiobutton
+from tkinter import Tk, StringVar,Button
 from tkinter import ttk
-from sys import exit as ex
 from pygame import mixer
 import threading
 from tkinter.simpledialog import askfloat

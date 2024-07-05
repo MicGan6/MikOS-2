@@ -43,28 +43,28 @@ root.resizable(width=False, height=False)
 root2.resizable(width=False, height=False)
 
 
-def Button1():
+def button1():
     global chicun
     chicun = '500x300'
     root2.withdraw()
 
-def Button2():
+def button2():
     global chicun
     chicun = '750x450'
     root2.withdraw()
 
-def Button3():
+def button3():
     global chicun
     chicun = '1000x600'
     root2.withdraw()
 #副窗口按钮
-button1 = Button(root2, text="500x300",overrelief='sunken',bd=4,command=Button1)
+button1 = Button(root2, text="500x300",overrelief='sunken',bd=4,command=button1)
 button1.pack(side="top", pady=8)
 
-button2 = Button(root2, text="750x450",overrelief='sunken',bd=4,command=Button2)
+button2 = Button(root2, text="750x450",overrelief='sunken',bd=4,command=button2)
 button2.pack(side="top", pady=8)
 
-button3 = Button(root2, text="1000x600",overrelief='sunken',bd=4,command=Button3)
+button3 = Button(root2, text="1000x600",overrelief='sunken',bd=4,command=button3)
 button3.pack(side="top", pady=8)
 
 
