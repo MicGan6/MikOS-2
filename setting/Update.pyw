@@ -18,17 +18,17 @@ try:
     Update = json.loads(requests.get('https://gangan1.github.io/MikOS_Update/Version.json').text) #获取并加载版本的json文件
     #获取json数据中的值
     last_version = Update.get('version')
-    LV_State = Update.get('State')
+    Last_Version_State = Update.get('State')
     link = Update.get('link')
     password = Update.get('password')
     #转化类型
     last_version = float(last_version)
     #检查更新
-    if last_version > old_version and LV_State == 'Release':
+    if last_version > old_version and Last_Version_State == 'Release':
         showinfo('检查更新', f'发现新版本，由于技术原因，请手动下载。\n链接{link}\n提取码{password}')
     elif last_version == old_version:
         showinfo('检查更新', '您的版本已是最新')
-    elif last_version > old_version and LV_State == 'Devlope':
+    elif last_version > old_version and Last_Version_State == 'Dev':
         showinfo('检查更新', '新版本正在开发哦~请坐和放宽~')
 except requests.exceptions.ConnectionError:
     showerror('错误', '网络原因，请稍后再试')
